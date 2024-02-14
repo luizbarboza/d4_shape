@@ -1,0 +1,1 @@
+Stack orders are typically not used directly, but are instead passed to [stack.order](https://pub.dev/documentation/d4_shape/latest/d4_shape/Stack/order.html).

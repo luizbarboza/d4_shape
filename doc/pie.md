@@ -1,0 +1,1 @@
+The pie generator computes the necessary angles to represent a tabular dataset as a pie or donut chart; these angles can then be passed to an [arc generator](https://pub.dev/documentation/d4_shape/latest/topics/Arcs-topic.html). (The pie generator does not produce a shape directly.)

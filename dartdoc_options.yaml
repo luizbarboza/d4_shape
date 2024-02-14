@@ -1,0 +1,28 @@
+dartdoc:
+  categories:
+    "Arcs":
+      markdown: doc/arc.md
+    "Areas":
+      markdown: doc/area.md
+    "Curves":
+      markdown: doc/curve.md
+    "Lines":
+      markdown: doc/line.md
+    "Links":
+      markdown: doc/link.md
+    "Pies":
+      markdown: doc/pie.md
+    "Stacks":
+      markdown: doc/stack.md
+    "Stack orders":
+      markdown: doc/stack_order.md
+    "Stack offsets":
+      markdown: doc/stack_offset.md
+    "Symbols":
+      markdown: doc/symbol.md
+    "Radial areas":
+      markdown: doc/radial_area.md
+    "Radial lines":
+      markdown: doc/radial_line.md
+    "Radial links":
+      markdown: doc/radial_link.md

@@ -1,0 +1,1 @@
+Symbols provide a categorical shape encoding as in a scatterplot. Symbols are centered at the origin; use a [transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) to move the symbol to a different position.
