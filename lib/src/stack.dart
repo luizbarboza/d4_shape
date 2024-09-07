@@ -6,6 +6,21 @@ import 'offset/wiggle.dart';
 import 'order/none.dart';
 import 'pie.dart';
 
+/// The definition of a stack order: given the generated series list, it must
+/// return an list of numeric indices representing the stack order.
+///
+/// {@category Stacks}
+/// {@category Stack orders}
+typedef StackOrder = Iterable<int> Function(List<List<List<num>>>);
+
+/// The definition of a stack offset: given the generated series list and the
+/// order index list, it is then responsible for updating the lower and upper
+/// values in the series list.
+///
+/// {@category Stacks}
+/// {@category Stack orders}
+typedef StackOffset = void Function(List<List<List<num>>>, List<int>);
+
 num stackValue<K>(Map<K, num> d, K key, _, __) {
   return d[key] ?? double.nan;
 }
@@ -68,8 +83,8 @@ class Stack<K, T> {
   /// “wide” rather than “tidy” representation of data and is no longer
   /// recommended. See [Stack.call] for an example using tidy data.
   num Function(T, K, int, Iterable<T>) value;
-  Iterable<int> Function(List<List<List<num>>>) _order = stackOrderNone;
-  var _offset = stackOffsetNone;
+  StackOrder _order = stackOrderNone;
+  StackOffset _offset = stackOffsetNone;
 
   /// Constructs a new stack generator with the given [value] accessor.
   ///
@@ -292,7 +307,7 @@ class StackSeries<K, T> extends DelegatingList<StackSeriesPoint<T>> {
 }
 
 class StackSeriesPoint<T> extends DelegatingList<num> {
-  late final T data;
+  late final T? data;
 
   StackSeriesPoint(super.source);
 }

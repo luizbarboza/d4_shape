@@ -47,7 +47,8 @@ export 'curve/monotone.dart' show curveMonotoneX, curveMonotoneY;
 export 'curve/natural.dart' show curveNatural;
 export 'curve/step.dart' show curveStep, curveStepAfter, curveStepBefore;
 
-export 'stack.dart' show Stack;
+export 'stack.dart' show Stack, StackOrder, StackOffset;
+export 'stack_tidy.dart' show StackTidy;
 export 'offset/expand.dart' show stackOffsetExpand;
 export 'offset/diverging.dart' show stackOffsetDiverging;
 export 'offset/none.dart' show stackOffsetNone;
