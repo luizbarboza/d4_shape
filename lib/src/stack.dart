@@ -18,7 +18,7 @@ typedef StackOrder = Iterable<int> Function(List<List<List<num>>>);
 /// values in the series list.
 ///
 /// {@category Stacks}
-/// {@category Stack orders}
+/// {@category Stack offsets}
 typedef StackOffset = void Function(List<List<List<num>>>, List<int>);
 
 num stackValue<K>(Map<K, num> d, K key, _, __) {
